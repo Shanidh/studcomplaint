@@ -1,0 +1,14 @@
+{% extends 'base.html' %} {% block content %}
+<div class="mb-3">
+    <label for="formGroupExampleInput" class="form-label">Subject of Complaint</label>
+    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Enter Subject">
+</div><br>
+<div class="mb-3">
+    <label for="formGroupExampleInput2" class="form-label">Type of Subject</label>
+    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Enter Type of Subject">
+</div><br>
+<div class="mb-3">
+    <label for="exampleFormControlTextarea1" class="form-label">Description</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="6"></textarea>
+</div>
+<a href=""><button type="button" class="btn  btn-outline-success" style="width: 200px;">Submit</button></a> {% endblock %}

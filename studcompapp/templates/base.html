@@ -1,0 +1,114 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.88.1">
+    <title>Student Complaint</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/carousel/">
+
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/footers/">
+    <!-- Bootstrap core CSS -->
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/footers.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+        
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+    </style>
+
+
+    <!-- Custom styles for this template -->
+    <link href="{% static 'css/carousel.css' %}" rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+            <div class="container-fluid">
+                <img src="{% static 'image/LogoMakr-8c4NPY.png' %}" alt="loaad" class="navbar-brand" style="height: 40px;">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">About</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex">
+                        <a href="index"><button type="button" class="btn  btn-outline-success">Log Out</button></a>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header><br><br>
+
+    <main>
+
+        <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="row" style="margin-left: 50px;">
+                        <div class="col-lg-5 col-md-12 col-xs-12 col-sm-12">
+                            <form action="#">
+                                <a href="addcomplaints" style="text-decoration: none;">Add Complaints</a><br><br>
+                                <a href="editprofile" style="text-decoration: none;">Edit Profile</a><br><br>
+                                <a href="changepassword" style="text-decoration: none;">Change Password</a><br><br>
+                                <a href="index" style="text-decoration: none;">Logout</a><br><br>
+                            </form>
+                        </div>
+                        <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                            {% block content %} {% endblock %}
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+            <div class="col-md-4 d-flex align-items-center">
+                <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+                    <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"/></svg>
+                </a>
+                <span class="text-muted">&copy; 2021 Company, Inc</span>
+            </div>
+
+            <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+                <li class="ms-3"><a class="text-muted" href="#"><i class="fa fa-twitter" style="height: 30px;width: 30px;"><use xlink:href="#twitter"/></i></a>
+                </li>
+                <li class="ms-3"><a class="text-muted" href="#"><i class="fa fa-instagram" style="height: 30px;width: 30px;"><use xlink:href="#instagram"/></i></a></li>
+                <li class="ms-3"><a class="text-muted" href="#"><i class="fa fa-facebook" style="height: 30px;width: 30px;"><use xlink:href="#facebook"/></i></a></li>
+            </ul>
+        </footer>
+    </main>
+
+
+    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+
+
+</body>
+
+</html>

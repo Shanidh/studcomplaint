@@ -1,0 +1,43 @@
+{% extends 'base.html' %} {% block content %}
+
+<form action="">
+    <div class="row g-3">
+        <div class="col">
+            <label for="First name">First name</label>
+            <input type="text" class="form-control" placeholder="First name" aria-label="First name">
+        </div>
+        <div class="col">
+            <label for="Sur name">Sur name</label>
+            <input type="text" class="form-control" placeholder="Sur name" aria-label="Sur name">
+        </div><br><br>
+
+
+    </div>
+    <div class="col">
+        <label for=" inputEmail3 " class="col-sm-2 col-form-label ">Email</label>
+        <input type="email " class="form-control " id="inputEmail3 ">
+    </div><br>
+    <div class="col">
+        Date of birth <br>
+        <p>
+            <select name="" id="">
+                <option value="">Day</option>
+                <option value="">1</option>
+                <option value="">2</option>
+                <option value="">3</option>
+                <option value="">4</option>
+            </select>
+            <select name="" id=""><option value="">Month</option>
+                <option value="">November</option>
+                <option value="">December</option></select>
+            <select name="" id=""><option value="">Year</option>
+                <option value="">2000</option>
+                <option value="">2001</option></select>
+        </p>
+        <label for="Gender"> Gender</label> <br>
+        <input type="radio" value="Male" name="Gender">Male &nbsp;
+        <input type="radio" value="Female" name="Gender">Female <br><br>
+        <button class="btn btn-success" type="button" style="width: 200px;">Cancel</button>
+        <button class="btn btn-success" type="button" style="width: 200px;">Update</button>
+    </div>
+</form>{% endblock %}
