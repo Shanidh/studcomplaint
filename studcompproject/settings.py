@@ -79,11 +79,20 @@ WSGI_APPLICATION = 'studcompproject.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        # 'ENGINE': 'django.db.backends.sqlite3',
+        # 'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'scms',
+        'USER': 'postgres',
+        'PASSWORD': 'password123',
+        'HOST': 'localhost',
+        'PORT': '5432',
     }
 }
 
+import dj_database_url
+db_from_env = dj_database_url.config(conn_max_age=600)
+DATABASES['default'].update(db_from_env)
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
@@ -122,7 +131,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
-
+MEDIA_URL='/studcompapp/media/'
+MEDIA_ROOT=os.path.join(BASE_DIR,'studcompapp/media')
 STATICFILES_DIRS = [
     BASE_DIR / "static",'/studcompapp/static/',
 ]
@@ -132,3 +142,4 @@ STATICFILES_DIRS = [
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
